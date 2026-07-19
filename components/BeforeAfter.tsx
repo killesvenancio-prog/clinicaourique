@@ -42,7 +42,7 @@ export default function BeforeAfter() {
           {CASES.map((item) => (
             <figure
               key={item.title}
-              className="overflow-hidden rounded-2xl border border-petrol-100 bg-white shadow-sm"
+              className="overflow-hidden rounded-2xl border border-petrol-100 bg-white shadow-sm transition-shadow hover:shadow-md"
             >
               <CompareSlider
                 before={item.before}

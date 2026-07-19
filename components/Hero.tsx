@@ -43,7 +43,7 @@ export default function Hero() {
             href={WHATSAPP_LINK}
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex min-h-11 items-center gap-2 rounded-full bg-gold-500 px-8 py-4 text-base font-semibold text-petrol-950 shadow-lg shadow-gold-500/20 transition-transform hover:scale-[1.02] hover:bg-gold-400 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-cream-50 focus-visible:ring-offset-2 focus-visible:ring-offset-petrol-900 motion-reduce:transition-none motion-reduce:hover:scale-100"
+            className="inline-flex min-h-11 items-center gap-2 rounded-full bg-gold-500 px-8 py-4 text-base font-semibold text-petrol-950 shadow-lg shadow-gold-500/20 transition-[transform,background-color] duration-150 ease-out hover:scale-[1.02] hover:bg-gold-400 active:scale-[0.97] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-cream-50 focus-visible:ring-offset-2 focus-visible:ring-offset-petrol-900 motion-reduce:transition-none motion-reduce:hover:scale-100 motion-reduce:active:scale-100"
           >
             <svg
               aria-hidden

@@ -20,7 +20,7 @@ export default function CompareSlider({
   const id = useId();
 
   return (
-    <div className="relative aspect-[2/1] w-full touch-pan-y select-none overflow-hidden bg-petrol-900 has-[:focus-visible]:ring-2 has-[:focus-visible]:ring-gold-400 has-[:focus-visible]:ring-offset-2">
+    <div className="group relative aspect-[2/1] w-full touch-pan-y select-none overflow-hidden bg-petrol-900 has-[:focus-visible]:ring-2 has-[:focus-visible]:ring-gold-400 has-[:focus-visible]:ring-offset-2">
       <Image
         src={after}
         alt={afterAlt}
@@ -54,7 +54,7 @@ export default function CompareSlider({
         style={{ left: `${value}%` }}
       />
       <div
-        className="pointer-events-none absolute top-1/2 flex h-11 w-11 -translate-x-1/2 -translate-y-1/2 items-center justify-center rounded-full bg-cream-50 text-petrol-800 shadow-lg"
+        className="pointer-events-none absolute top-1/2 flex h-11 w-11 -translate-x-1/2 -translate-y-1/2 items-center justify-center rounded-full bg-cream-50 text-petrol-800 shadow-lg transition-transform duration-150 ease-out group-hover:scale-110 motion-reduce:group-hover:scale-100"
         style={{ left: `${value}%` }}
       >
         <svg

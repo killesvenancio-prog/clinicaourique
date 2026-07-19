@@ -1,3 +1,5 @@
+import RevealOnScroll from "@/components/RevealOnScroll";
+
 const TIMELINE = [
   {
     year: "1973",
@@ -29,7 +31,7 @@ export default function About() {
   return (
     <section id="sobre" className="scroll-mt-20 bg-cream-50 py-20 sm:py-28">
       <div className="mx-auto max-w-6xl px-5 sm:px-8">
-        <div className="mx-auto max-w-2xl text-center">
+        <RevealOnScroll className="mx-auto max-w-2xl text-center">
           <span className="text-xs font-semibold uppercase tracking-[0.16em] text-gold-700">
             Nossa história
           </span>
@@ -42,7 +44,7 @@ export default function About() {
             odontologia como forma de cuidar das pessoas &mdash; e essa
             tradição segue viva em cada atendimento.
           </p>
-        </div>
+        </RevealOnScroll>
 
         <div className="relative mx-auto mt-16 max-w-3xl">
           <div
@@ -55,8 +57,10 @@ export default function About() {
               const isEven = index % 2 === 1;
               const isLatest = index === TIMELINE.length - 1;
               return (
-                <li
+                <RevealOnScroll
+                  as="li"
                   key={item.year}
+                  delayMs={index * 80}
                   className="relative pl-10 sm:grid sm:grid-cols-2 sm:gap-10 sm:pl-0"
                 >
                   <div
@@ -89,7 +93,7 @@ export default function About() {
                       {item.description}
                     </p>
                   </div>
-                </li>
+                </RevealOnScroll>
               );
             })}
           </ol>

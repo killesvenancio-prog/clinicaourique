@@ -52,7 +52,7 @@ export default function Location() {
                 href={GOOGLE_MAPS_LINK}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex min-h-11 items-center justify-center gap-2 rounded-full bg-cream-50 px-6 py-3 text-sm font-semibold text-petrol-900 transition-colors hover:bg-gold-100 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gold-400 focus-visible:ring-offset-2 focus-visible:ring-offset-petrol-800"
+                className="inline-flex min-h-11 items-center justify-center gap-2 rounded-full bg-cream-50 px-6 py-3 text-sm font-semibold text-petrol-900 transition-[background-color,transform] duration-150 ease-out hover:bg-gold-100 active:scale-[0.97] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gold-400 focus-visible:ring-offset-2 focus-visible:ring-offset-petrol-800 motion-reduce:active:scale-100"
               >
                 Ver no Google Maps
               </a>
@@ -60,7 +60,7 @@ export default function Location() {
                 href={WHATSAPP_LINK}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex min-h-11 items-center justify-center gap-2 rounded-full border border-cream-50/40 px-6 py-3 text-sm font-semibold text-cream-50 transition-colors hover:bg-petrol-700 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-cream-50 focus-visible:ring-offset-2 focus-visible:ring-offset-petrol-800"
+                className="inline-flex min-h-11 items-center justify-center gap-2 rounded-full border border-cream-50/40 px-6 py-3 text-sm font-semibold text-cream-50 transition-[background-color,transform] duration-150 ease-out hover:bg-petrol-700 active:scale-[0.97] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-cream-50 focus-visible:ring-offset-2 focus-visible:ring-offset-petrol-800 motion-reduce:active:scale-100"
               >
                 Falar no WhatsApp
               </a>
