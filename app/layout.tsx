@@ -120,7 +120,11 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="pt-BR" className={`${playfair.variable} ${inter.variable} h-full antialiased`}>
+    <html
+      lang="pt-BR"
+      className={`${playfair.variable} ${inter.variable} h-full antialiased`}
+      suppressHydrationWarning
+    >
       <body className="min-h-full flex flex-col bg-cream-50 text-petrol-900">
         {/* Runs before paint so scroll-reveal only ever hides content when JS actually works. */}
         <script

@@ -190,7 +190,7 @@ export default function Specialties() {
         </div>
 
         <div className="mt-14 grid gap-10 lg:grid-cols-[.82fr_1.18fr] lg:gap-16">
-          <article className="scroll-reveal self-start rounded-2xl bg-petrol-900 p-7 text-cream-50 sm:p-9 lg:sticky lg:top-28">
+          <article className="scroll-reveal self-start rounded-2xl bg-petrol-900 p-7 text-cream-50 sm:p-9">
             <FEATURED.icon className="h-10 w-10 text-gold-300" />
             <p className="mt-8 text-sm font-semibold text-gold-300">Nossa maior especialidade</p>
             <h3 className="mt-2 font-heading text-3xl font-semibold">{FEATURED.title}</h3>
