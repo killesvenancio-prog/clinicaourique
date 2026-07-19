@@ -14,7 +14,10 @@ export default function Header() {
   return (
     <header className="sticky top-0 z-40 border-b border-petrol-100 bg-cream-50/90 backdrop-blur">
       <div className="mx-auto flex max-w-6xl items-center justify-between px-5 py-3 sm:px-8">
-        <Link href="#top" className="shrink-0">
+        <Link
+          href="#top"
+          className="shrink-0 rounded-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gold-500 focus-visible:ring-offset-2 focus-visible:ring-offset-cream-50"
+        >
           <Image
             src={logo}
             alt="Clínica Ourique — A Ciência do Sorriso"
@@ -28,7 +31,7 @@ export default function Header() {
             <a
               key={link.href}
               href={link.href}
-              className="text-sm font-medium text-petrol-700 transition-colors hover:text-petrol-900"
+              className="rounded-sm text-sm font-medium text-petrol-700 transition-colors hover:text-petrol-900 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gold-500 focus-visible:ring-offset-2 focus-visible:ring-offset-cream-50"
             >
               {link.label}
             </a>
@@ -39,7 +42,7 @@ export default function Header() {
           href={WHATSAPP_LINK}
           target="_blank"
           rel="noopener noreferrer"
-          className="rounded-full bg-petrol-800 px-4 py-2 text-sm font-semibold text-cream-50 shadow-sm transition-colors hover:bg-petrol-900 sm:px-5"
+          className="inline-flex min-h-11 items-center justify-center rounded-full bg-petrol-800 px-4 py-2 text-sm font-semibold text-cream-50 shadow-sm transition-colors hover:bg-petrol-900 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gold-500 focus-visible:ring-offset-2 focus-visible:ring-offset-cream-50 sm:px-5"
         >
           Agendar
         </a>

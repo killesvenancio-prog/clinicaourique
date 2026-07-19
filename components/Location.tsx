@@ -8,10 +8,10 @@ import {
 
 export default function Location() {
   return (
-    <section id="localizacao" className="bg-cream-50 py-20 sm:py-28">
+    <section id="localizacao" className="scroll-mt-20 bg-cream-50 py-20 sm:py-28">
       <div className="mx-auto max-w-6xl px-5 sm:px-8">
         <div className="mx-auto max-w-2xl text-center">
-          <span className="text-xs font-semibold uppercase tracking-[0.16em] text-gold-600">
+          <span className="text-xs font-semibold uppercase tracking-[0.16em] text-gold-700">
             Localização
           </span>
           <h2 className="mt-3 font-heading text-3xl font-semibold text-petrol-900 sm:text-4xl">
@@ -52,7 +52,7 @@ export default function Location() {
                 href={GOOGLE_MAPS_LINK}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center justify-center gap-2 rounded-full bg-cream-50 px-6 py-3 text-sm font-semibold text-petrol-900 transition-colors hover:bg-gold-100"
+                className="inline-flex min-h-11 items-center justify-center gap-2 rounded-full bg-cream-50 px-6 py-3 text-sm font-semibold text-petrol-900 transition-colors hover:bg-gold-100 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gold-400 focus-visible:ring-offset-2 focus-visible:ring-offset-petrol-800"
               >
                 Ver no Google Maps
               </a>
@@ -60,7 +60,7 @@ export default function Location() {
                 href={WHATSAPP_LINK}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center justify-center gap-2 rounded-full border border-cream-50/40 px-6 py-3 text-sm font-semibold text-cream-50 transition-colors hover:bg-petrol-700"
+                className="inline-flex min-h-11 items-center justify-center gap-2 rounded-full border border-cream-50/40 px-6 py-3 text-sm font-semibold text-cream-50 transition-colors hover:bg-petrol-700 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-cream-50 focus-visible:ring-offset-2 focus-visible:ring-offset-petrol-800"
               >
                 Falar no WhatsApp
               </a>

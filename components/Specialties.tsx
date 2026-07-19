@@ -81,13 +81,14 @@ function IconGeneral(props: SVGProps<SVGSVGElement>) {
   );
 }
 
+const FEATURED = {
+  icon: IconImplant,
+  title: "Implantodontia",
+  description:
+    "Nossa maior especialidade: reabilitações complexas com implantes dentários, com a experiência de mais de 20 anos do Dr. Rafael Goulart Ourique desde 2002.",
+};
+
 const SPECIALTIES = [
-  {
-    icon: IconImplant,
-    title: "Implantodontia",
-    description:
-      "Reabilitações complexas com implantes dentários, com a experiência de mais de 20 anos do Dr. Rafael Goulart Ourique.",
-  },
   {
     icon: IconProsthesis,
     title: "Prótese Dentária",
@@ -116,10 +117,10 @@ const SPECIALTIES = [
 
 export default function Specialties() {
   return (
-    <section id="especialidades" className="bg-petrol-50 py-20 sm:py-28">
+    <section id="especialidades" className="scroll-mt-20 bg-petrol-50 py-20 sm:py-28">
       <div className="mx-auto max-w-6xl px-5 sm:px-8">
         <div className="mx-auto max-w-2xl text-center">
-          <span className="text-xs font-semibold uppercase tracking-[0.16em] text-gold-600">
+          <span className="text-xs font-semibold uppercase tracking-[0.16em] text-gold-700">
             Especialidades
           </span>
           <h2 className="mt-3 font-heading text-3xl font-semibold text-petrol-900 sm:text-4xl">
@@ -127,23 +128,40 @@ export default function Specialties() {
           </h2>
         </div>
 
-        <div className="mt-14 grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3">
-          {SPECIALTIES.map(({ icon: Icon, title, description }) => (
-            <div
-              key={title}
-              className="rounded-2xl border border-petrol-100 bg-cream-50 p-6 shadow-sm transition-shadow hover:shadow-md"
-            >
-              <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-petrol-800 text-cream-50">
-                <Icon className="h-6 w-6" />
-              </div>
-              <h3 className="mt-5 font-heading text-lg font-semibold text-petrol-900">
-                {title}
-              </h3>
-              <p className="mt-2 text-sm leading-relaxed text-petrol-600">
-                {description}
-              </p>
+        <div className="mt-14 grid grid-cols-1 gap-5 lg:grid-cols-12">
+          <div className="relative overflow-hidden rounded-2xl border-2 border-gold-400 bg-gradient-to-br from-petrol-900 to-petrol-800 p-7 shadow-md sm:p-8 lg:col-span-5">
+            <span className="inline-flex items-center rounded-full border border-gold-400/40 bg-gold-400/10 px-3 py-1 text-[11px] font-semibold uppercase tracking-[0.14em] text-gold-300">
+              Especialidade principal
+            </span>
+            <div className="mt-6 flex h-14 w-14 items-center justify-center rounded-xl bg-gold-500 text-petrol-950">
+              <FEATURED.icon className="h-7 w-7" />
             </div>
-          ))}
+            <h3 className="mt-6 font-heading text-2xl font-semibold text-cream-50">
+              {FEATURED.title}
+            </h3>
+            <p className="mt-3 text-sm leading-relaxed text-petrol-100">
+              {FEATURED.description}
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 gap-5 sm:grid-cols-2 lg:col-span-7">
+            {SPECIALTIES.map(({ icon: Icon, title, description }) => (
+              <div
+                key={title}
+                className="rounded-2xl border border-petrol-100 bg-cream-50 p-6 shadow-sm transition-shadow hover:shadow-md"
+              >
+                <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-petrol-800 text-cream-50">
+                  <Icon className="h-6 w-6" />
+                </div>
+                <h3 className="mt-5 font-heading text-lg font-semibold text-petrol-900">
+                  {title}
+                </h3>
+                <p className="mt-2 text-sm leading-relaxed text-petrol-600">
+                  {description}
+                </p>
+              </div>
+            ))}
+          </div>
         </div>
       </div>
     </section>

@@ -1,16 +1,20 @@
-import Image from "next/image";
-import caseImplantodontia from "@/public/case-implantodontia.jpg";
-import caseLaminado from "@/public/case-laminado.jpg";
+import CompareSlider from "@/components/CompareSlider";
+import beforeImplantodontia from "@/public/before-implantodontia.jpg";
+import afterImplantodontia from "@/public/after-implantodontia.jpg";
+import beforeLaminado from "@/public/before-laminado.jpg";
+import afterLaminado from "@/public/after-laminado.jpg";
 
 const CASES = [
   {
-    image: caseImplantodontia,
+    before: beforeImplantodontia,
+    after: afterImplantodontia,
     title: "Reabilitação com implantes dentários",
     description:
       "Reconstrução total da arcada com implantes e prótese fixa, devolvendo função e estética.",
   },
   {
-    image: caseLaminado,
+    before: beforeLaminado,
+    after: afterLaminado,
     title: "Harmonização do sorriso com laminado cerâmico",
     description:
       "Facetas de porcelana para uniformizar cor e forma dos dentes anteriores.",
@@ -22,14 +26,15 @@ export default function BeforeAfter() {
     <section className="bg-cream-50 py-20 sm:py-28">
       <div className="mx-auto max-w-6xl px-5 sm:px-8">
         <div className="mx-auto max-w-2xl text-center">
-          <span className="text-xs font-semibold uppercase tracking-[0.16em] text-gold-600">
+          <span className="text-xs font-semibold uppercase tracking-[0.16em] text-gold-700">
             Resultados
           </span>
           <h2 className="mt-3 font-heading text-3xl font-semibold text-petrol-900 sm:text-4xl">
             Transformações reais, tratadas com cuidado
           </h2>
           <p className="mt-4 text-base leading-relaxed text-petrol-700">
-            Casos reais de pacientes atendidos na Clínica Ourique.
+            Casos reais de pacientes atendidos na Clínica Ourique. Arraste o
+            controle para comparar o antes e o depois.
           </p>
         </div>
 
@@ -39,11 +44,11 @@ export default function BeforeAfter() {
               key={item.title}
               className="overflow-hidden rounded-2xl border border-petrol-100 bg-white shadow-sm"
             >
-              <Image
-                src={item.image}
-                alt={item.title}
-                className="h-auto w-full"
-                sizes="(min-width: 640px) 50vw, 100vw"
+              <CompareSlider
+                before={item.before}
+                after={item.after}
+                beforeAlt={`${item.title} — antes do tratamento`}
+                afterAlt={`${item.title} — depois do tratamento`}
               />
               <figcaption className="border-t border-petrol-100 px-5 py-4">
                 <span className="text-sm font-semibold text-petrol-900">

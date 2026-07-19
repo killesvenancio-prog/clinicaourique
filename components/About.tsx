@@ -27,10 +27,10 @@ const TIMELINE = [
 
 export default function About() {
   return (
-    <section id="sobre" className="bg-cream-50 py-20 sm:py-28">
+    <section id="sobre" className="scroll-mt-20 bg-cream-50 py-20 sm:py-28">
       <div className="mx-auto max-w-6xl px-5 sm:px-8">
         <div className="mx-auto max-w-2xl text-center">
-          <span className="text-xs font-semibold uppercase tracking-[0.16em] text-gold-600">
+          <span className="text-xs font-semibold uppercase tracking-[0.16em] text-gold-700">
             Nossa história
           </span>
           <h2 className="mt-3 font-heading text-3xl font-semibold text-petrol-900 sm:text-4xl">
@@ -53,6 +53,7 @@ export default function About() {
           <ol className="space-y-10 sm:space-y-14">
             {TIMELINE.map((item, index) => {
               const isEven = index % 2 === 1;
+              const isLatest = index === TIMELINE.length - 1;
               return (
                 <li
                   key={item.year}
@@ -60,9 +61,15 @@ export default function About() {
                 >
                   <div
                     aria-hidden
-                    className="absolute left-0 top-1 flex h-8 w-8 items-center justify-center rounded-full border-2 border-gold-500 bg-cream-50 sm:left-1/2 sm:-translate-x-1/2"
+                    className={`absolute left-0 top-1 flex h-8 w-8 items-center justify-center rounded-full border-2 border-gold-500 sm:left-1/2 sm:-translate-x-1/2 ${
+                      isLatest ? "bg-gold-500" : "bg-cream-50"
+                    }`}
                   >
-                    <span className="h-2.5 w-2.5 rounded-full bg-gold-500" />
+                    <span
+                      className={`h-2.5 w-2.5 rounded-full ${
+                        isLatest ? "bg-cream-50" : "bg-gold-500"
+                      }`}
+                    />
                   </div>
 
                   <div
