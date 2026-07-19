@@ -8,9 +8,11 @@ import {
   PHONE_DISPLAY,
   SOCIAL,
 } from "@/lib/constants";
+import ScrollRevealObserver from "@/components/ScrollRevealObserver";
 import "./globals.css";
 
-const SITE_URL = "https://saas-two-smoky-13.vercel.app";
+// TODO: replace with the clinic's real domain once it's live.
+const SITE_URL = "https://www.clinicaourique.com.br";
 
 const jsonLd = {
   "@context": "https://schema.org",
@@ -120,10 +122,17 @@ export default function RootLayout({
   return (
     <html lang="pt-BR" className={`${playfair.variable} ${inter.variable} h-full antialiased`}>
       <body className="min-h-full flex flex-col bg-cream-50 text-petrol-900">
+        {/* Runs before paint so scroll-reveal only ever hides content when JS actually works. */}
+        <script
+          dangerouslySetInnerHTML={{
+            __html: "document.documentElement.classList.add('js')",
+          }}
+        />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
         />
+        <ScrollRevealObserver />
         {children}
       </body>
     </html>

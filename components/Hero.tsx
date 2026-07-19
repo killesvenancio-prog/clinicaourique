@@ -36,14 +36,14 @@ export default function Hero() {
                 href={WHATSAPP_LINK}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex min-h-12 shrink-0 items-center justify-center gap-2 whitespace-nowrap rounded-full bg-gold-500 px-7 py-3.5 text-base font-semibold text-petrol-950 shadow-lg shadow-gold-500/20 transition-[transform,background-color] duration-200 ease-out hover:-translate-y-0.5 hover:bg-gold-400 active:translate-y-0 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-cream-50 focus-visible:ring-offset-2 focus-visible:ring-offset-petrol-950 motion-reduce:transform-none"
+                className="inline-flex min-h-12 shrink-0 items-center justify-center gap-2 whitespace-nowrap rounded-full bg-gold-500 px-7 py-3.5 text-base font-semibold text-petrol-950 shadow-lg shadow-gold-500/20 transition-[transform,background-color] duration-200 ease-snappy hover:-translate-y-0.5 hover:bg-gold-400 active:translate-y-0 active:scale-[0.97] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-cream-50 focus-visible:ring-offset-2 focus-visible:ring-offset-petrol-950 motion-reduce:transform-none"
               >
                 <WhatsAppIcon />
                 Agendar uma avaliação
               </a>
               <a
                 href="#resultados"
-                className="inline-flex min-h-12 shrink-0 items-center justify-center whitespace-nowrap rounded-full border border-cream-50/25 px-7 py-3.5 text-sm font-semibold text-cream-50 transition-colors duration-200 hover:border-cream-50/50 hover:bg-white/5 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gold-400"
+                className="inline-flex min-h-12 shrink-0 items-center justify-center whitespace-nowrap rounded-full border border-cream-50/25 px-7 py-3.5 text-sm font-semibold text-cream-50 transition-[background-color,border-color,transform] duration-200 ease-snappy hover:border-cream-50/50 hover:bg-white/5 active:scale-[0.97] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gold-400 motion-reduce:active:scale-100"
               >
                 Ver resultados reais
               </a>

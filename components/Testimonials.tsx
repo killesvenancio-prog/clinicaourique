@@ -31,7 +31,7 @@ export default function Testimonials() {
   return (
     <section id="depoimentos" className="scroll-mt-20 bg-petrol-950 py-20 text-cream-50 sm:py-28">
       <div className="mx-auto max-w-7xl px-5 sm:px-8">
-        <div className="grid items-end gap-6 sm:grid-cols-[1fr_auto]">
+        <div className="scroll-reveal grid items-end gap-6 sm:grid-cols-[1fr_auto]">
           <div>
             <span className="text-sm font-semibold text-gold-300">Histórias de pacientes</span>
             <h2 className="mt-4 max-w-3xl text-balance font-heading text-4xl font-semibold leading-tight sm:text-5xl">
@@ -47,7 +47,7 @@ export default function Testimonials() {
           {TESTIMONIALS.map((item, index) => (
             <figure
               key={item.name}
-              className={`flex flex-col rounded-2xl border p-6 sm:p-8 ${
+              className={`scroll-reveal flex flex-col rounded-2xl border p-6 sm:p-8 ${
                 index === 0
                   ? "border-gold-400/45 bg-gold-500/10 lg:row-span-2 lg:p-10"
                   : "border-white/10 bg-white/[0.045]"

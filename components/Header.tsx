@@ -43,7 +43,7 @@ export default function Header() {
           href={WHATSAPP_LINK}
           target="_blank"
           rel="noopener noreferrer"
-          className="inline-flex min-h-11 items-center justify-center rounded-full bg-petrol-900 px-4 py-2 text-sm font-semibold text-cream-50 shadow-sm transition-[background-color,transform] duration-200 ease-out hover:bg-gold-700 active:scale-[0.98] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gold-500 focus-visible:ring-offset-2 focus-visible:ring-offset-cream-50 motion-reduce:active:scale-100 sm:px-5"
+          className="inline-flex min-h-11 items-center justify-center rounded-full bg-petrol-900 px-4 py-2 text-sm font-semibold text-cream-50 shadow-sm transition-[background-color,transform] duration-200 ease-snappy hover:bg-gold-700 active:scale-[0.98] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gold-500 focus-visible:ring-offset-2 focus-visible:ring-offset-cream-50 motion-reduce:active:scale-100 sm:px-5"
         >
           <span className="sm:hidden">Agendar</span>
           <span className="hidden sm:inline">Agendar avaliação</span>

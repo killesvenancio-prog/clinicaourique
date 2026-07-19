@@ -59,6 +59,9 @@
 
   --font-heading: var(--font-playfair);
   --font-sans: var(--font-inter);
+
+  /* Stronger ease-out than Tailwind's default — more punch on primary CTAs. */
+  --ease-snappy: cubic-bezier(0.23, 1, 0.32, 1);
 }
 
 body {
@@ -76,15 +79,29 @@ html {
   color: var(--color-petrol-950);
 }
 
-.content-reveal {
-  animation: content-in 420ms ease-out both;
-  animation-delay: var(--reveal-delay, 0ms);
+/*
+ * Scroll-triggered entrance for section headings and repeated list items.
+ * Hidden state only applies once the `.js` class is present — added by a
+ * blocking inline script at the top of <body> in layout.tsx, before any
+ * content paints. Without JS (or if it fails), `.js` is never added and
+ * everything stays fully visible: there is no "stuck invisible" state.
+ * ScrollRevealObserver adds `.is-revealed` once per element via
+ * IntersectionObserver and never removes it, so content that has already
+ * appeared stays visible even if the user scrolls back up past it.
+ */
+.js .scroll-reveal:not(.is-revealed) {
+  opacity: 0;
+  transform: translateY(16px);
 }
 
-@keyframes content-in {
+.js .scroll-reveal.is-revealed {
+  animation: scroll-reveal-in 420ms ease-out both;
+}
+
+@keyframes scroll-reveal-in {
   from {
     opacity: 0;
-    transform: translateY(8px);
+    transform: translateY(16px);
   }
   to {
     opacity: 1;
@@ -97,7 +114,12 @@ html {
     scroll-behavior: auto;
   }
 
-  .content-reveal {
+  .js .scroll-reveal:not(.is-revealed) {
+    opacity: 1;
+    transform: none;
+  }
+
+  .js .scroll-reveal.is-revealed {
     animation: none;
   }
 }

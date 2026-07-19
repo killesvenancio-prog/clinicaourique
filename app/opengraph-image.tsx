@@ -36,7 +36,6 @@ export default async function OpengraphImage() {
             boxShadow: "0 20px 40px rgba(0,0,0,0.25)",
           }}
         >
-          {/* eslint-disable-next-line @next/next/no-img-element */}
           <img src={logoSrc} width={380} height={81} alt="" style={{ objectFit: "contain" }} />
         </div>
 

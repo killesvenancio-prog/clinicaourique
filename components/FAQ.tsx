@@ -37,7 +37,7 @@ export default function FAQ() {
   return (
     <section id="duvidas" className="scroll-mt-20 bg-petrol-50 py-20 sm:py-28">
       <div className="mx-auto grid max-w-7xl gap-12 px-5 sm:px-8 lg:grid-cols-[.72fr_1.28fr] lg:gap-20">
-        <div>
+        <div className="scroll-reveal">
           <h2 className="text-balance font-heading text-4xl font-semibold leading-tight text-petrol-950 sm:text-5xl">
             Informação clara também faz parte do cuidado.
           </h2>
@@ -49,13 +49,13 @@ export default function FAQ() {
             href={WHATSAPP_LINK}
             target="_blank"
             rel="noopener noreferrer"
-            className="mt-7 inline-flex min-h-11 items-center justify-center rounded-full border border-petrol-300 px-6 py-3 text-sm font-semibold text-petrol-900 transition-colors hover:border-gold-600 hover:bg-cream-50 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gold-500"
+            className="mt-7 inline-flex min-h-11 items-center justify-center rounded-full border border-petrol-300 px-6 py-3 text-sm font-semibold text-petrol-900 transition-[background-color,border-color,transform] duration-150 ease-out hover:border-gold-600 hover:bg-cream-50 active:scale-[0.97] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gold-500 motion-reduce:active:scale-100"
           >
             Fazer outra pergunta
           </a>
         </div>
 
-        <div className="divide-y divide-petrol-100 overflow-hidden rounded-2xl border border-petrol-100 bg-cream-50">
+        <div className="scroll-reveal divide-y divide-petrol-100 overflow-hidden rounded-2xl border border-petrol-100 bg-cream-50">
           {FAQS.map((item) => (
             <details key={item.question} className="group px-5 py-1 sm:px-7">
               <summary className="flex min-h-16 cursor-pointer list-none items-center justify-between gap-5 py-4 text-left font-semibold text-petrol-950 marker:content-none focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-inset focus-visible:ring-gold-500">

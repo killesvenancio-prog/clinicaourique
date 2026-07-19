@@ -25,6 +25,7 @@ export default function CompareSlider({
         src={after}
         alt={afterAlt}
         fill
+        placeholder="blur"
         className="pointer-events-none object-cover"
         sizes="(min-width: 640px) 50vw, 100vw"
       />
@@ -37,6 +38,7 @@ export default function CompareSlider({
           src={before}
           alt={beforeAlt}
           fill
+          placeholder="blur"
           className="object-cover"
           sizes="(min-width: 640px) 50vw, 100vw"
         />
@@ -54,7 +56,7 @@ export default function CompareSlider({
         style={{ left: `${value}%` }}
       />
       <div
-        className="pointer-events-none absolute top-1/2 flex h-11 w-11 -translate-x-1/2 -translate-y-1/2 items-center justify-center rounded-full bg-cream-50 text-petrol-800 shadow-lg transition-transform duration-150 ease-out group-hover:scale-110 motion-reduce:group-hover:scale-100"
+        className="pointer-events-none absolute top-1/2 flex h-11 w-11 -translate-x-1/2 -translate-y-1/2 items-center justify-center rounded-full bg-cream-50 text-petrol-800 shadow-lg transition-transform duration-150 ease-snappy group-hover:scale-110 group-active:scale-95 motion-reduce:group-hover:scale-100 motion-reduce:group-active:scale-100"
         style={{ left: `${value}%` }}
       >
         <svg

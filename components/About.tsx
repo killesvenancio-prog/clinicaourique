@@ -36,7 +36,7 @@ export default function About() {
     <section id="sobre" className="scroll-mt-20 bg-cream-50 py-20 sm:py-28">
       <div className="mx-auto max-w-7xl px-5 sm:px-8">
         <div className="grid gap-12 lg:grid-cols-[.86fr_1.14fr] lg:gap-20">
-          <div>
+          <div className="scroll-reveal">
             <h2 className="max-w-xl text-balance font-heading text-4xl font-semibold leading-tight text-petrol-950 sm:text-5xl">
               Ciência, experiência e um cuidado que atravessa gerações.
             </h2>
@@ -69,14 +69,14 @@ export default function About() {
           <div className="flex flex-col justify-between gap-10">
             <ol className="divide-y divide-petrol-200 border-y border-petrol-200">
               {MILESTONES.map((item) => (
-                <li key={item.year} className="grid gap-3 py-5 sm:grid-cols-[6rem_1fr] sm:items-baseline sm:gap-6">
+                <li key={item.year} className="scroll-reveal grid gap-3 py-5 sm:grid-cols-[6rem_1fr] sm:items-baseline sm:gap-6">
                   <span className="font-heading text-3xl font-semibold text-gold-700">{item.year}</span>
                   <p className="text-sm leading-relaxed text-petrol-700">{item.label}</p>
                 </li>
               ))}
             </ol>
 
-            <div>
+            <div className="scroll-reveal">
               <p className="text-sm font-semibold text-petrol-900">Credenciais e reconhecimento</p>
               <div className="mt-4 divide-y divide-petrol-100 rounded-2xl border border-petrol-100 bg-white">
                 {CREDENTIALS.map((item) => (

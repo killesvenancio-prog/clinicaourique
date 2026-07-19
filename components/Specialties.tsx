@@ -182,7 +182,7 @@ export default function Specialties() {
   return (
     <section id="especialidades" className="scroll-mt-20 bg-petrol-50 py-20 sm:py-28">
       <div className="mx-auto max-w-7xl px-5 sm:px-8">
-        <div className="max-w-2xl">
+        <div className="scroll-reveal max-w-2xl">
           <p className="text-sm font-semibold text-gold-700">Especialidades</p>
           <h2 className="mt-3 text-balance font-heading text-4xl font-semibold leading-tight text-petrol-900 sm:text-5xl">
             Cuidado completo, do primeiro dente ao sorriso reabilitado
@@ -190,7 +190,7 @@ export default function Specialties() {
         </div>
 
         <div className="mt-14 grid gap-10 lg:grid-cols-[.82fr_1.18fr] lg:gap-16">
-          <article className="self-start rounded-2xl bg-petrol-900 p-7 text-cream-50 sm:p-9 lg:sticky lg:top-28">
+          <article className="scroll-reveal self-start rounded-2xl bg-petrol-900 p-7 text-cream-50 sm:p-9 lg:sticky lg:top-28">
             <FEATURED.icon className="h-10 w-10 text-gold-300" />
             <p className="mt-8 text-sm font-semibold text-gold-300">Nossa maior especialidade</p>
             <h3 className="mt-2 font-heading text-3xl font-semibold">{FEATURED.title}</h3>
@@ -201,7 +201,7 @@ export default function Specialties() {
 
           <div className="divide-y divide-petrol-200 border-y border-petrol-200">
             {SPECIALTIES.map(({ icon: Icon, title, description }) => (
-              <article key={title} className="grid gap-4 py-6 sm:grid-cols-[2rem_11rem_1fr] sm:items-start sm:gap-5">
+              <article key={title} className="scroll-reveal grid gap-4 py-6 sm:grid-cols-[2rem_11rem_1fr] sm:items-start sm:gap-5">
                 <Icon className="h-6 w-6 text-gold-700" />
                 <h3 className="font-heading text-xl font-semibold text-petrol-900">{title}</h3>
                 <p className="text-sm leading-relaxed text-petrol-600">{description}</p>
@@ -209,7 +209,7 @@ export default function Specialties() {
             ))}
           </div>
 
-          <div className="flex flex-col justify-between gap-5 border-t border-petrol-200 pt-7 lg:col-span-2 sm:flex-row sm:items-center">
+          <div className="scroll-reveal flex flex-col justify-between gap-5 border-t border-petrol-200 pt-7 lg:col-span-2 sm:flex-row sm:items-center">
             <div>
               <p className="font-heading text-xl font-semibold text-petrol-950">Não sabe qual tratamento procurar?</p>
               <p className="mt-1 text-sm text-petrol-600">Conte o que está incomodando. A equipe orienta o melhor primeiro passo.</p>
@@ -218,7 +218,7 @@ export default function Specialties() {
               href={WHATSAPP_LINK}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex min-h-11 shrink-0 items-center justify-center rounded-full bg-petrol-900 px-6 py-3 text-sm font-semibold text-cream-50 transition-colors hover:bg-gold-700 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gold-500"
+              className="inline-flex min-h-11 shrink-0 items-center justify-center rounded-full bg-petrol-900 px-6 py-3 text-sm font-semibold text-cream-50 transition-[background-color,transform] duration-150 ease-out hover:bg-gold-700 active:scale-[0.97] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gold-500 motion-reduce:active:scale-100"
             >
               Falar com a equipe
             </a>

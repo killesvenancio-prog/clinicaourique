@@ -12,7 +12,7 @@ export default function Location() {
   return (
     <section id="localizacao" className="scroll-mt-20 bg-cream-50 py-20 sm:py-28">
       <div className="mx-auto max-w-7xl px-5 sm:px-8">
-        <div className="mx-auto max-w-2xl text-center">
+        <div className="scroll-reveal mx-auto max-w-2xl text-center">
           <span className="text-sm font-semibold text-gold-700">
             Localização
           </span>
@@ -21,7 +21,7 @@ export default function Location() {
           </h2>
         </div>
 
-        <div className="mt-14 grid grid-cols-1 gap-8 overflow-hidden rounded-2xl border border-petrol-100 bg-petrol-800 lg:grid-cols-2">
+        <div className="scroll-reveal mt-14 grid grid-cols-1 gap-8 overflow-hidden rounded-2xl border border-petrol-100 bg-petrol-800 lg:grid-cols-2">
           <div className="order-2 aspect-video w-full lg:order-1 lg:aspect-auto lg:min-h-[380px]">
             <iframe
               title="Localização da Clínica Ourique no Google Maps"
