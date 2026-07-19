@@ -23,12 +23,10 @@ const CASES = [
 
 export default function BeforeAfter() {
   return (
-    <section className="bg-cream-50 py-20 sm:py-28">
-      <div className="mx-auto max-w-6xl px-5 sm:px-8">
+    <section id="resultados" className="scroll-mt-20 bg-cream-50 py-20 sm:py-28">
+      <div className="mx-auto max-w-7xl px-5 sm:px-8">
         <div className="mx-auto max-w-2xl text-center">
-          <span className="text-xs font-semibold uppercase tracking-[0.16em] text-gold-700">
-            Resultados
-          </span>
+          <p className="text-sm font-semibold text-gold-700">Resultados reais</p>
           <h2 className="mt-3 font-heading text-3xl font-semibold text-petrol-900 sm:text-4xl">
             Transformações reais, tratadas com cuidado
           </h2>

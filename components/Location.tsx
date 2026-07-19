@@ -11,9 +11,9 @@ import {
 export default function Location() {
   return (
     <section id="localizacao" className="scroll-mt-20 bg-cream-50 py-20 sm:py-28">
-      <div className="mx-auto max-w-6xl px-5 sm:px-8">
+      <div className="mx-auto max-w-7xl px-5 sm:px-8">
         <div className="mx-auto max-w-2xl text-center">
-          <span className="text-xs font-semibold uppercase tracking-[0.16em] text-gold-700">
+          <span className="text-sm font-semibold text-gold-700">
             Localização
           </span>
           <h2 className="mt-3 font-heading text-3xl font-semibold text-petrol-900 sm:text-4xl">

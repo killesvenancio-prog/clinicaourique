@@ -10,7 +10,7 @@ import {
 } from "@/lib/constants";
 import "./globals.css";
 
-const SITE_URL = "https://www.clinicaourique.com.br";
+const SITE_URL = "https://saas-two-smoky-13.vercel.app";
 
 const jsonLd = {
   "@context": "https://schema.org",
@@ -48,9 +48,10 @@ const jsonLd = {
     },
   ],
   sameAs: [SOCIAL.facebook, SOCIAL.instagram],
-  founder: {
+  employee: {
     "@type": "Person",
     name: DENTIST.name,
+    jobTitle: "Cirurgião-dentista responsável técnico",
   },
 };
 

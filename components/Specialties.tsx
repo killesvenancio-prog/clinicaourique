@@ -1,4 +1,5 @@
 import type { SVGProps } from "react";
+import { WHATSAPP_LINK } from "@/lib/constants";
 
 function IconImplant(props: SVGProps<SVGSVGElement>) {
   return (
@@ -180,53 +181,47 @@ const SPECIALTIES = [
 export default function Specialties() {
   return (
     <section id="especialidades" className="scroll-mt-20 bg-petrol-50 py-20 sm:py-28">
-      <div className="mx-auto max-w-6xl px-5 sm:px-8">
-        <div className="mx-auto max-w-2xl text-center">
-          <span className="text-xs font-semibold uppercase tracking-[0.16em] text-gold-700">
-            Especialidades
-          </span>
-          <h2 className="mt-3 font-heading text-3xl font-semibold text-petrol-900 sm:text-4xl">
+      <div className="mx-auto max-w-7xl px-5 sm:px-8">
+        <div className="max-w-2xl">
+          <p className="text-sm font-semibold text-gold-700">Especialidades</p>
+          <h2 className="mt-3 text-balance font-heading text-4xl font-semibold leading-tight text-petrol-900 sm:text-5xl">
             Cuidado completo, do primeiro dente ao sorriso reabilitado
           </h2>
         </div>
 
-        <div className="mt-14 space-y-6">
-          <div className="relative overflow-hidden rounded-2xl border-2 border-gold-400 bg-gradient-to-br from-petrol-900 to-petrol-800 p-7 shadow-md sm:p-8">
-            <div className="flex flex-col items-start gap-6 sm:flex-row sm:items-center">
-              <div className="flex h-14 w-14 shrink-0 items-center justify-center rounded-xl bg-gold-500 text-petrol-950">
-                <FEATURED.icon className="h-7 w-7" />
-              </div>
-              <div>
-                <span className="inline-flex items-center rounded-full border border-gold-400/40 bg-gold-400/10 px-3 py-1 text-[11px] font-semibold uppercase tracking-[0.14em] text-gold-300">
-                  Especialidade principal
-                </span>
-                <h3 className="mt-3 font-heading text-2xl font-semibold text-cream-50">
-                  {FEATURED.title}
-                </h3>
-                <p className="mt-2 max-w-2xl text-sm leading-relaxed text-petrol-100 sm:text-base">
-                  {FEATURED.description}
-                </p>
-              </div>
-            </div>
+        <div className="mt-14 grid gap-10 lg:grid-cols-[.82fr_1.18fr] lg:gap-16">
+          <article className="self-start rounded-2xl bg-petrol-900 p-7 text-cream-50 sm:p-9 lg:sticky lg:top-28">
+            <FEATURED.icon className="h-10 w-10 text-gold-300" />
+            <p className="mt-8 text-sm font-semibold text-gold-300">Nossa maior especialidade</p>
+            <h3 className="mt-2 font-heading text-3xl font-semibold">{FEATURED.title}</h3>
+            <p className="mt-4 text-base leading-relaxed text-petrol-100">
+              {FEATURED.description}
+            </p>
+          </article>
+
+          <div className="divide-y divide-petrol-200 border-y border-petrol-200">
+            {SPECIALTIES.map(({ icon: Icon, title, description }) => (
+              <article key={title} className="grid gap-4 py-6 sm:grid-cols-[2rem_11rem_1fr] sm:items-start sm:gap-5">
+                <Icon className="h-6 w-6 text-gold-700" />
+                <h3 className="font-heading text-xl font-semibold text-petrol-900">{title}</h3>
+                <p className="text-sm leading-relaxed text-petrol-600">{description}</p>
+              </article>
+            ))}
           </div>
 
-          <div className="grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-4">
-            {SPECIALTIES.map(({ icon: Icon, title, description }) => (
-              <div
-                key={title}
-                className="rounded-2xl border border-petrol-100 bg-cream-50 p-6 shadow-sm transition-shadow hover:shadow-md"
-              >
-                <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-petrol-800 text-cream-50">
-                  <Icon className="h-6 w-6" />
-                </div>
-                <h3 className="mt-5 font-heading text-lg font-semibold text-petrol-900">
-                  {title}
-                </h3>
-                <p className="mt-2 text-sm leading-relaxed text-petrol-600">
-                  {description}
-                </p>
-              </div>
-            ))}
+          <div className="flex flex-col justify-between gap-5 border-t border-petrol-200 pt-7 lg:col-span-2 sm:flex-row sm:items-center">
+            <div>
+              <p className="font-heading text-xl font-semibold text-petrol-950">Não sabe qual tratamento procurar?</p>
+              <p className="mt-1 text-sm text-petrol-600">Conte o que está incomodando. A equipe orienta o melhor primeiro passo.</p>
+            </div>
+            <a
+              href={WHATSAPP_LINK}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex min-h-11 shrink-0 items-center justify-center rounded-full bg-petrol-900 px-6 py-3 text-sm font-semibold text-cream-50 transition-colors hover:bg-gold-700 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gold-500"
+            >
+              Falar com a equipe
+            </a>
           </div>
         </div>
       </div>
