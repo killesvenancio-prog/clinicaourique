@@ -2,19 +2,19 @@
 
 :root {
   --background: #fbfaf6;
-  --foreground: #14302c;
+  --foreground: #2f2513;
 
-  --color-petrol-50: #eef5f4;
-  --color-petrol-100: #d7e8e6;
-  --color-petrol-200: #b0d1cd;
-  --color-petrol-300: #83b5af;
-  --color-petrol-400: #57988f;
-  --color-petrol-500: #3a7b72;
-  --color-petrol-600: #2a615a;
-  --color-petrol-700: #204d47;
-  --color-petrol-800: #1a3e3a;
-  --color-petrol-900: #14302c;
-  --color-petrol-950: #0c1f1c;
+  --color-petrol-50: #f6f3ee;
+  --color-petrol-100: #eae4d9;
+  --color-petrol-200: #d5c8b1;
+  --color-petrol-300: #bca883;
+  --color-petrol-400: #a48753;
+  --color-petrol-500: #866832;
+  --color-petrol-600: #67512a;
+  --color-petrol-700: #503f21;
+  --color-petrol-800: #3f321a;
+  --color-petrol-900: #2f2513;
+  --color-petrol-950: #1e170b;
 
   --color-gold-50: #fbf7ee;
   --color-gold-100: #f3e9cf;
