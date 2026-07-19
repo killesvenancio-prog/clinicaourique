@@ -81,6 +81,50 @@ function IconGeneral(props: SVGProps<SVGSVGElement>) {
   );
 }
 
+function IconEndo(props: SVGProps<SVGSVGElement>) {
+  return (
+    <svg viewBox="0 0 24 24" fill="none" strokeWidth={1.6} {...props}>
+      <path
+        d="M7 4.5c0-1.4 2-2 5-2s5 .6 5 2c0 2-1 2.7-1 4.5 0 1.2.6 1.7.6 3 0 3-1 5-1.8 7.5-.2.7-.5 1.5-1.3 1.5-.9 0-1-1.3-1.1-2.3-.1-.8-.2-1.4-.9-1.4s-.8.6-.9 1.4c-.1 1-.2 2.3-1.1 2.3-.8 0-1.1-.8-1.3-1.5C7.4 17 6.4 15 6.4 12c0-1.3.6-1.8.6-3 0-1.8-1-2.5-1-4.5Z"
+        stroke="currentColor"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+      <path d="M12 6v5.5" stroke="currentColor" strokeLinecap="round" />
+      <circle cx="12" cy="13.3" r="0.9" fill="currentColor" stroke="none" />
+    </svg>
+  );
+}
+
+function IconPerio(props: SVGProps<SVGSVGElement>) {
+  return (
+    <svg viewBox="0 0 24 24" fill="none" strokeWidth={1.6} {...props}>
+      <path d="M5 9c1-2.5 3.5-4 7-4s6 1.5 7 4" stroke="currentColor" strokeLinecap="round" />
+      <path
+        d="M6.5 9.5c0 4 1.5 6 2.3 8.7.2.8.6 1.3 1.2 1.3s.8-.6.9-1.4c.1-.9.2-1.6 1.1-1.6s1 .7 1.1 1.6c.1.8.3 1.4.9 1.4.6 0 1-.5 1.2-1.3.8-2.7 2.3-4.7 2.3-8.7"
+        stroke="currentColor"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+    </svg>
+  );
+}
+
+function IconSurgery(props: SVGProps<SVGSVGElement>) {
+  return (
+    <svg viewBox="0 0 24 24" fill="none" strokeWidth={1.6} {...props}>
+      <path d="M6 18 16 8" stroke="currentColor" strokeLinecap="round" />
+      <path
+        d="M16 8l2.5-2.5a1.5 1.5 0 0 0-2.1-2.1L14 5.9"
+        stroke="currentColor"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+      <path d="M6 18l-1.5 3.5L8 20" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" />
+    </svg>
+  );
+}
+
 const FEATURED = {
   icon: IconImplant,
   title: "Implantodontia",
@@ -108,6 +152,24 @@ const SPECIALTIES = [
       "Tratamentos ortodônticos para todas as idades conduzidos pela Dra. Bibiana Terra.",
   },
   {
+    icon: IconEndo,
+    title: "Endodontia",
+    description:
+      "Tratamento de canal para salvar dentes comprometidos, com técnica e conforto.",
+  },
+  {
+    icon: IconPerio,
+    title: "Periodontia",
+    description:
+      "Cuidado com gengivas e estruturas de suporte para uma base saudável e duradoura.",
+  },
+  {
+    icon: IconSurgery,
+    title: "Cirurgia",
+    description:
+      "Procedimentos cirúrgicos orais realizados com segurança e planejamento cuidadoso.",
+  },
+  {
     icon: IconGeneral,
     title: "Odontologia Geral",
     description:
@@ -128,23 +190,27 @@ export default function Specialties() {
           </h2>
         </div>
 
-        <div className="mt-14 grid grid-cols-1 gap-5 lg:grid-cols-12">
-          <div className="relative overflow-hidden rounded-2xl border-2 border-gold-400 bg-gradient-to-br from-petrol-900 to-petrol-800 p-7 shadow-md sm:p-8 lg:col-span-5">
-            <span className="inline-flex items-center rounded-full border border-gold-400/40 bg-gold-400/10 px-3 py-1 text-[11px] font-semibold uppercase tracking-[0.14em] text-gold-300">
-              Especialidade principal
-            </span>
-            <div className="mt-6 flex h-14 w-14 items-center justify-center rounded-xl bg-gold-500 text-petrol-950">
-              <FEATURED.icon className="h-7 w-7" />
+        <div className="mt-14 space-y-6">
+          <div className="relative overflow-hidden rounded-2xl border-2 border-gold-400 bg-gradient-to-br from-petrol-900 to-petrol-800 p-7 shadow-md sm:p-8">
+            <div className="flex flex-col items-start gap-6 sm:flex-row sm:items-center">
+              <div className="flex h-14 w-14 shrink-0 items-center justify-center rounded-xl bg-gold-500 text-petrol-950">
+                <FEATURED.icon className="h-7 w-7" />
+              </div>
+              <div>
+                <span className="inline-flex items-center rounded-full border border-gold-400/40 bg-gold-400/10 px-3 py-1 text-[11px] font-semibold uppercase tracking-[0.14em] text-gold-300">
+                  Especialidade principal
+                </span>
+                <h3 className="mt-3 font-heading text-2xl font-semibold text-cream-50">
+                  {FEATURED.title}
+                </h3>
+                <p className="mt-2 max-w-2xl text-sm leading-relaxed text-petrol-100 sm:text-base">
+                  {FEATURED.description}
+                </p>
+              </div>
             </div>
-            <h3 className="mt-6 font-heading text-2xl font-semibold text-cream-50">
-              {FEATURED.title}
-            </h3>
-            <p className="mt-3 text-sm leading-relaxed text-petrol-100">
-              {FEATURED.description}
-            </p>
           </div>
 
-          <div className="grid grid-cols-1 gap-5 sm:grid-cols-2 lg:col-span-7">
+          <div className="grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-4">
             {SPECIALTIES.map(({ icon: Icon, title, description }) => (
               <div
                 key={title}

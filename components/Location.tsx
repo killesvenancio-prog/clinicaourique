@@ -1,5 +1,7 @@
 import {
   ADDRESS,
+  BUSINESS_HOURS,
+  EMAIL,
   GOOGLE_MAPS_EMBED_SRC,
   GOOGLE_MAPS_LINK,
   PHONE_DISPLAY,
@@ -37,13 +39,32 @@ export default function Location() {
                 {ADDRESS.street}
                 <br />
                 {ADDRESS.neighborhood}, {ADDRESS.city} - {ADDRESS.state}
+                <br />
+                CEP {ADDRESS.zip}
               </p>
+              <p className="mt-2 text-xs text-petrol-300">
+                Acesso facilitado para cadeirantes.
+              </p>
+            </div>
+
+            <div>
+              <h3 className="font-heading text-xl font-semibold">Horário</h3>
+              <dl className="mt-2 space-y-1 text-sm leading-relaxed text-petrol-100">
+                {BUSINESS_HOURS.map((item) => (
+                  <div key={item.day} className="flex justify-between gap-4">
+                    <dt>{item.day}</dt>
+                    <dd>{item.hours}</dd>
+                  </div>
+                ))}
+              </dl>
             </div>
 
             <div>
               <h3 className="font-heading text-xl font-semibold">Contato</h3>
               <p className="mt-2 text-sm leading-relaxed text-petrol-100">
                 WhatsApp: {PHONE_DISPLAY}
+                <br />
+                E-mail: {EMAIL}
               </p>
             </div>
 
