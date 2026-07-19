@@ -1,18 +1,18 @@
 const TESTIMONIALS = [
   {
-    name: "Marta S.",
+    name: "Reginaldo Caetano",
     quote:
-      "Fiz meus implantes com o Dr. Rafael depois de anos evitando o dentista por medo. Fui tratada com muita calma e hoje sorrio sem vergonha.",
+      "Sofri desde criança com minha dentadura, já que jamais conseguia me alimentar com liberdade. Não tinha mais esperança em poder um dia comer um churrasco mastigando de ambos os lados. Então procurei o Rafael Ourique onde fui um dos seus primeiros pacientes, senão o primeiro, a fazer um implante. Foi uma revolução na minha vida. Hoje, aos meus 77 anos, sou muito grato a ele e feliz por ter tomado aquela decisão.",
   },
   {
-    name: "João P.",
+    name: "Raquel Ferreira Costa",
     quote:
-      "Já são três gerações da minha família atendidas na Clínica Ourique. É a confiança de sempre ser bem cuidado, do meu avô aos meus filhos.",
+      "Gostaria de registrar minha profunda satisfação com o atendimento desta clínica. Desde a recepção até a pós conclusão do tratamento, fui atendida com profissionalismo, atenção e respeito, com excelente competência técnica. Meus sinceros agradecimentos ao Dr. Rafael pelo cuidado e excelência. Recomendo sem hesitação, e olha que tenho pânico a dentistas.",
   },
   {
-    name: "Carla R.",
+    name: "Maria de Fátima Aguiar Goulart",
     quote:
-      "A ortodontia com a Dra. Bibiana mudou o sorriso da minha filha. Atendimento atencioso do começo ao fim do tratamento.",
+      "Há anos frequento a Clínica Ourique, porque o atendimento prestado foca na qualidade clínica, na empatia e no bem estar do paciente, oferecendo orientações de cuidado pós-procedimento e acompanhando a recuperação. Super recomendo o Dr. Rafael Ourique.",
   },
 ];
 
@@ -59,8 +59,7 @@ export default function Testimonials() {
         </div>
 
         <p className="mx-auto mt-8 max-w-xl text-center text-xs text-petrol-400">
-          Depoimentos ilustrativos &mdash; substitua pelas avaliações reais
-          dos pacientes (Google, Instagram) antes de publicar.
+          Avaliações reais de pacientes no Google.
         </p>
       </div>
     </section>

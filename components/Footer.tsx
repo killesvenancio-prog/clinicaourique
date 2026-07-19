@@ -4,9 +4,14 @@ export default function Footer() {
   return (
     <footer className="bg-petrol-950 py-10 text-petrol-200">
       <div className="mx-auto flex max-w-6xl flex-col items-center gap-4 px-5 text-center sm:px-8">
-        <span className="font-heading text-lg font-semibold text-cream-50">
-          Clínica Ourique
-        </span>
+        <div className="flex flex-col items-center gap-0.5">
+          <span className="font-heading text-lg font-semibold text-cream-50">
+            Clínica Ourique
+          </span>
+          <span className="text-[11px] font-medium uppercase tracking-[0.16em] text-gold-400">
+            A Ciência do Sorriso
+          </span>
+        </div>
         <p className="text-sm">
           {ADDRESS.street}, {ADDRESS.neighborhood} &middot; {ADDRESS.city} -{" "}
           {ADDRESS.state}

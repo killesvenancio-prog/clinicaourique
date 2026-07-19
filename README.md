@@ -25,13 +25,9 @@ Abra [http://localhost:3000](http://localhost:3000) para ver o resultado.
   Testimonials, Location, Footer, WhatsAppButton)
 - `lib/constants.ts` — dados de contato, endereço e links de WhatsApp/Google
   Maps usados em toda a página
-
-## Pendências para publicação
-
-- Substituir as imagens placeholder da seção "antes e depois" por fotos
-  reais de pacientes, com autorização.
-- Substituir os depoimentos ilustrativos por avaliações reais (Google,
-  Instagram).
+- `public/` — logo e fotos reais de casos (antes/depois)
+- `app/icon.png`, `app/apple-icon.png` — favicon/ícone gerados a partir da
+  marca da clínica
 
 ## Build
 

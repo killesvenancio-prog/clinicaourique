@@ -1,5 +1,7 @@
+import Image from "next/image";
 import Link from "next/link";
 import { WHATSAPP_LINK } from "@/lib/constants";
+import logo from "@/public/logo.png";
 
 const NAV_LINKS = [
   { href: "#sobre", label: "Sobre" },
@@ -12,13 +14,13 @@ export default function Header() {
   return (
     <header className="sticky top-0 z-40 border-b border-petrol-100 bg-cream-50/90 backdrop-blur">
       <div className="mx-auto flex max-w-6xl items-center justify-between px-5 py-3 sm:px-8">
-        <Link href="#top" className="flex flex-col leading-none">
-          <span className="font-heading text-lg font-semibold tracking-tight text-petrol-900 sm:text-xl">
-            Clínica Ourique
-          </span>
-          <span className="text-[11px] font-medium uppercase tracking-[0.16em] text-gold-600">
-            Tradição desde 1973
-          </span>
+        <Link href="#top" className="shrink-0">
+          <Image
+            src={logo}
+            alt="Clínica Ourique — A Ciência do Sorriso"
+            className="h-8 w-auto sm:h-9"
+            priority
+          />
         </Link>
 
         <nav className="hidden items-center gap-8 md:flex">

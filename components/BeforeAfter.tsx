@@ -1,41 +1,21 @@
-const CASES = [
-  { label: "Implante dentário" },
-  { label: "Prótese dentária" },
-  { label: "Laminado cerâmico" },
-];
+import Image from "next/image";
+import caseImplantodontia from "@/public/case-implantodontia.jpg";
+import caseLaminado from "@/public/case-laminado.jpg";
 
-function ImagePlaceholder({ tag }: { tag: string }) {
-  return (
-    <div className="flex flex-col overflow-hidden rounded-2xl border border-petrol-100 bg-cream-50">
-      <div className="grid grid-cols-2 divide-x divide-dashed divide-petrol-200">
-        {["Antes", "Depois"].map((phase) => (
-          <div
-            key={phase}
-            className="flex aspect-square flex-col items-center justify-center gap-2 bg-petrol-50/70 p-4"
-          >
-            <svg
-              aria-hidden
-              viewBox="0 0 24 24"
-              className="h-8 w-8 text-petrol-300"
-              fill="none"
-              strokeWidth={1.5}
-            >
-              <rect x="3" y="3" width="18" height="18" rx="2" stroke="currentColor" />
-              <circle cx="8.5" cy="9" r="1.5" stroke="currentColor" />
-              <path d="M4 17l5-5 4 4 3-3 4 4" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" />
-            </svg>
-            <span className="text-xs font-medium uppercase tracking-wide text-petrol-400">
-              {phase}
-            </span>
-          </div>
-        ))}
-      </div>
-      <div className="border-t border-petrol-100 px-4 py-3 text-center">
-        <span className="text-sm font-semibold text-petrol-800">{tag}</span>
-      </div>
-    </div>
-  );
-}
+const CASES = [
+  {
+    image: caseImplantodontia,
+    title: "Reabilitação com implantes dentários",
+    description:
+      "Reconstrução total da arcada com implantes e prótese fixa, devolvendo função e estética.",
+  },
+  {
+    image: caseLaminado,
+    title: "Harmonização do sorriso com laminado cerâmico",
+    description:
+      "Facetas de porcelana para uniformizar cor e forma dos dentes anteriores.",
+  },
+];
 
 export default function BeforeAfter() {
   return (
@@ -49,14 +29,31 @@ export default function BeforeAfter() {
             Transformações reais, tratadas com cuidado
           </h2>
           <p className="mt-4 text-base leading-relaxed text-petrol-700">
-            Em breve, esta seção trará fotos reais de casos tratados na
-            clínica, sempre com a autorização dos pacientes.
+            Casos reais de pacientes atendidos na Clínica Ourique.
           </p>
         </div>
 
-        <div className="mt-14 grid grid-cols-1 gap-5 sm:grid-cols-3">
+        <div className="mt-14 grid grid-cols-1 gap-6 sm:grid-cols-2">
           {CASES.map((item) => (
-            <ImagePlaceholder key={item.label} tag={item.label} />
+            <figure
+              key={item.title}
+              className="overflow-hidden rounded-2xl border border-petrol-100 bg-white shadow-sm"
+            >
+              <Image
+                src={item.image}
+                alt={item.title}
+                className="h-auto w-full"
+                sizes="(min-width: 640px) 50vw, 100vw"
+              />
+              <figcaption className="border-t border-petrol-100 px-5 py-4">
+                <span className="text-sm font-semibold text-petrol-900">
+                  {item.title}
+                </span>
+                <p className="mt-1 text-xs leading-relaxed text-petrol-500">
+                  {item.description}
+                </p>
+              </figcaption>
+            </figure>
           ))}
         </div>
       </div>
