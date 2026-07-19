@@ -1,0 +1,72 @@
+@import "tailwindcss";
+
+:root {
+  --background: #fbfaf6;
+  --foreground: #14302c;
+
+  --color-petrol-50: #eef5f4;
+  --color-petrol-100: #d7e8e6;
+  --color-petrol-200: #b0d1cd;
+  --color-petrol-300: #83b5af;
+  --color-petrol-400: #57988f;
+  --color-petrol-500: #3a7b72;
+  --color-petrol-600: #2a615a;
+  --color-petrol-700: #204d47;
+  --color-petrol-800: #1a3e3a;
+  --color-petrol-900: #14302c;
+  --color-petrol-950: #0c1f1c;
+
+  --color-gold-50: #fbf7ee;
+  --color-gold-100: #f3e9cf;
+  --color-gold-200: #e8d5a3;
+  --color-gold-300: #dbbd72;
+  --color-gold-400: #cca94d;
+  --color-gold-500: #b8923a;
+  --color-gold-600: #9a752e;
+  --color-gold-700: #7a5a25;
+
+  --color-cream-50: #fbfaf6;
+  --color-cream-100: #f4f1e8;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+
+  --color-petrol-50: var(--color-petrol-50);
+  --color-petrol-100: var(--color-petrol-100);
+  --color-petrol-200: var(--color-petrol-200);
+  --color-petrol-300: var(--color-petrol-300);
+  --color-petrol-400: var(--color-petrol-400);
+  --color-petrol-500: var(--color-petrol-500);
+  --color-petrol-600: var(--color-petrol-600);
+  --color-petrol-700: var(--color-petrol-700);
+  --color-petrol-800: var(--color-petrol-800);
+  --color-petrol-900: var(--color-petrol-900);
+  --color-petrol-950: var(--color-petrol-950);
+
+  --color-gold-50: var(--color-gold-50);
+  --color-gold-100: var(--color-gold-100);
+  --color-gold-200: var(--color-gold-200);
+  --color-gold-300: var(--color-gold-300);
+  --color-gold-400: var(--color-gold-400);
+  --color-gold-500: var(--color-gold-500);
+  --color-gold-600: var(--color-gold-600);
+  --color-gold-700: var(--color-gold-700);
+
+  --color-cream-50: var(--color-cream-50);
+  --color-cream-100: var(--color-cream-100);
+
+  --font-heading: var(--font-playfair);
+  --font-sans: var(--font-inter);
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-sans), Arial, Helvetica, sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
